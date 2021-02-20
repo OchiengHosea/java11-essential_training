@@ -1,9 +1,0 @@
-String s1 = "This is a String!";
-var s2 = "This is another String!";
-var s3 = new String("This is also a String!");
-var chars = s1.toCharArray();
-String s4 = "Shirt Size: ";
-String s5 = "M";
-String s6 = s4 + s5 +", Dty"+ 4;
-var upper = s6.toUpperCase();
-var bytes = s6.getBytes();
