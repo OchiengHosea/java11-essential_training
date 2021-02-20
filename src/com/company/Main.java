@@ -7,7 +7,8 @@ import java.util.Locale;
 public class Main {
 
     public static void main(String[] args) {
-        primitiveValuesToString();
+//        primitiveValuesToString();
+        interpolateStringsWithPlaceholders();
     }
 
     private static void primitiveValuesToString() {
@@ -47,9 +48,10 @@ public class Main {
         var price = 14.99;
         var color = "Red";
 
-        var template = "Clothing item %s, size %s, color % s, KES %f";
+        var template = "Clothing item: %s, size %s, color %s, KES %.2f";
         var itemString = String.format(template, item, size, color, price);
 
         System.out.println(itemString);
+        return  itemString;
     }
 }
