@@ -3,13 +3,15 @@ package com.company;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.Locale;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 //        primitiveValuesToString();
 //        compareStrings();
-        parseStringValues();
+//        parseStringValues();
+        gettingStringValuesFromUser();
     }
 
     private static void primitiveValuesToString() {
@@ -84,5 +86,20 @@ public class Main {
         System.out.println(len);
         var trimmed = s2.trim();
         System.out.println(trimmed.length());
+    }
+
+    private static void gettingStringValuesFromUser(){
+        var scanner = new Scanner(System.in);
+        System.out.println("Enter a value: ");
+        var input = scanner.nextLine();
+        System.out.println(input);
+
+        System.out.println("Enter number 1: ");
+        var number1 = scanner.nextInt();
+        System.out.println("Enter number 2: ");
+        var number2 = scanner.nextInt();
+
+        var sum = number2 + number1;
+        System.out.println("Sum : "+ sum);
     }
 }
