@@ -5,4 +5,16 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
     }
+
+    private static String interpolateStringsWithPlaceholders() {
+        var item = "Shirt";
+        var size = "M";
+        var price = 14.99;
+        var color = "Red";
+
+        var template = "Clothing item %s, size %s, color % s, KES %f";
+        var itemString = String.format(template, item, size, color, price);
+
+        System.out.println(itemString);
+    }
 }
