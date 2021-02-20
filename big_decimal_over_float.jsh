@@ -1,0 +1,6 @@
+double value = .012;
+double pSum = value + value + value;
+var stringValue = Double.toString(value);
+var bigValue = new BigDecimal(stringValue);
+var bigSum = bigValue.add(bigValue).add(bigValue);
+var sum = bigSum.doubleValue();
