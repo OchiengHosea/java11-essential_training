@@ -27,4 +27,19 @@ public class Main {
         }
         System.out.println("App didnt break");
     }
+    private static void closeObjectsWithTryWith() {
+        var file = new File("hello.txt");
+        System.out.println("file exists : "+file.exists());
+        // Closed aoutomatically
+        try (FileReader reader = new FileReader(file);
+             BufferedReader br = new BufferedReader(reader)) {
+            var text = br.readLine();
+            System.out.println(text);
+        } catch (IOException e){
+            e.printStackTrace();
+        } finally {
+
+        }
+    }
+
 }
