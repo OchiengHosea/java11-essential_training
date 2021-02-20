@@ -89,7 +89,7 @@ public class Main {
         System.out.println(trimmed.length());
     }
 
-    private static void gettingStringValuesFromUser(){
+    private static void gettingStringValuesFromUser() {
         var scanner = new Scanner(System.in);
         System.out.println("Enter a value: ");
         var input = scanner.nextLine();
@@ -101,7 +101,9 @@ public class Main {
         var number2 = scanner.nextInt();
 
         var sum = number2 + number1;
-        System.out.println("Sum : "+ sum);
+        System.out.println("Sum : " + sum);
+    }
+
     private static String interpolateStringsWithPlaceholders() {
         var item = "Shirt";
         var size = "M";
