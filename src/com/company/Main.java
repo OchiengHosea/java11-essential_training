@@ -12,6 +12,7 @@ public class Main {
 //        compareStrings();
 //        parseStringValues();
         gettingStringValuesFromUser();
+        interpolateStringsWithPlaceholders();
     }
 
     private static void primitiveValuesToString() {
@@ -101,5 +102,16 @@ public class Main {
 
         var sum = number2 + number1;
         System.out.println("Sum : "+ sum);
+    private static String interpolateStringsWithPlaceholders() {
+        var item = "Shirt";
+        var size = "M";
+        var price = 14.99;
+        var color = "Red";
+
+        var template = "Clothing item: %s, size %s, color %s, KES %.2f";
+        var itemString = String.format(template, item, size, color, price);
+
+        System.out.println(itemString);
+        return  itemString;
     }
 }
