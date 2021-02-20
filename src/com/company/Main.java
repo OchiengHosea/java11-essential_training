@@ -7,7 +7,8 @@ import java.util.Locale;
 public class Main {
 
     public static void main(String[] args) {
-        primitiveValuesToString();
+//        primitiveValuesToString();
+        compareStrings();
     }
 
     private static void primitiveValuesToString() {
@@ -39,5 +40,40 @@ public class Main {
 
         var df = new DecimalFormat("KES 0.00");
         System.out.println("Decimal Format: " + df.format(1));
+    }
+
+    private static boolean compareStrings() {
+        String s1 = "Hello!";
+        var s2 = "Hello!";
+        if (s1 == s2) {
+            System.out.println("they match");
+        } else {
+            System.out.println("They dont match");
+        }
+
+        String s3 = new String("Hello!");
+        String s4 = new String("Hello!");
+
+        if (s3 == s4) {
+            System.out.println("they match");
+        } else {
+            System.out.println("They dont match");
+        }
+
+        if (s3.equals(s4)){
+            System.out.println("they match");
+        } else {
+            System.out.println("They dont match");
+        }
+
+
+        var s5 = "HELLO!";
+        if (s5.equalsIgnoreCase(s4)){
+            System.out.println("they match");
+        } else {
+            System.out.println("They dont match");
+        }
+
+        return s1 == s2;
     }
 }
