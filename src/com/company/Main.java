@@ -8,7 +8,8 @@ public class Main {
 
     public static void main(String[] args) {
 //        primitiveValuesToString();
-        compareStrings();
+//        compareStrings();
+        parseStringValues();
     }
 
     private static void primitiveValuesToString() {
@@ -75,5 +76,13 @@ public class Main {
         }
 
         return s1 == s2;
+    }
+
+    private static void parseStringValues() {
+        String s2 = "Welcome       ";
+        var len = s2.length();
+        System.out.println(len);
+        var trimmed = s2.trim();
+        System.out.println(trimmed.length());
     }
 }
