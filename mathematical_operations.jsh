@@ -1,9 +1,0 @@
-var intvalue1 = 56;
-var intValue2 = 43;
-var result1 = intvalue1 + intValue2;
-int result2 = intvalue1 - intValue2;
-int result3 = intvalue1 * intValue2;
-int result4 = intvalue1 / intValue2;
-double doubleValue = -3.99999;
-long rounded = Math.round(doubleValue);
-double absvalue = Math.abs(doubleValue);
