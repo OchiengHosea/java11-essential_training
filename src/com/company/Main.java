@@ -3,11 +3,15 @@ package com.company;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.Locale;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 //        primitiveValuesToString();
+//        compareStrings();
+//        parseStringValues();
+        gettingStringValuesFromUser();
         interpolateStringsWithPlaceholders();
     }
 
@@ -42,6 +46,62 @@ public class Main {
         System.out.println("Decimal Format: " + df.format(1));
     }
 
+    private static boolean compareStrings() {
+        String s1 = "Hello!";
+        var s2 = "Hello!";
+        if (s1 == s2) {
+            System.out.println("they match");
+        } else {
+            System.out.println("They dont match");
+        }
+
+        String s3 = new String("Hello!");
+        String s4 = new String("Hello!");
+
+        if (s3 == s4) {
+            System.out.println("they match");
+        } else {
+            System.out.println("They dont match");
+        }
+
+        if (s3.equals(s4)){
+            System.out.println("they match");
+        } else {
+            System.out.println("They dont match");
+        }
+
+
+        var s5 = "HELLO!";
+        if (s5.equalsIgnoreCase(s4)){
+            System.out.println("they match");
+        } else {
+            System.out.println("They dont match");
+        }
+
+        return s1 == s2;
+    }
+
+    private static void parseStringValues() {
+        String s2 = "Welcome       ";
+        var len = s2.length();
+        System.out.println(len);
+        var trimmed = s2.trim();
+        System.out.println(trimmed.length());
+    }
+
+    private static void gettingStringValuesFromUser(){
+        var scanner = new Scanner(System.in);
+        System.out.println("Enter a value: ");
+        var input = scanner.nextLine();
+        System.out.println(input);
+
+        System.out.println("Enter number 1: ");
+        var number1 = scanner.nextInt();
+        System.out.println("Enter number 2: ");
+        var number2 = scanner.nextInt();
+
+        var sum = number2 + number1;
+        System.out.println("Sum : "+ sum);
     private static String interpolateStringsWithPlaceholders() {
         var item = "Shirt";
         var size = "M";
